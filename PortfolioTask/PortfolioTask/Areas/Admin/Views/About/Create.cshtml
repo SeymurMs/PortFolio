@@ -1,0 +1,48 @@
+﻿@model About
+@{
+    ViewData["Title"] = "Create";
+}
+
+<form method="post" class="user">
+    <div class="form-group">
+        <input type="text" asp-for="@Model.Title" class="form-control form-control-user"
+             placeholder="Title Here.........">
+    </div>
+     <div class="form-group">
+        <input type="text" asp-for="@Model.Address" class="form-control form-control-user"
+             placeholder="Address Here.........">
+    </div>
+     <div class="form-group">9
+        <input type="tel" asp-for="@Model.Number" class="form-control form-control-user"
+             placeholder="Number Here.........">
+    </div>
+    <div class="form-group">
+        <input type="email" asp-for="@Model.Email" class="form-control form-control-user"
+             placeholder="Email Here.........">
+    </div> 
+    <div class="form-group">
+        <input type="text" asp-for="@Model.Description" class="form-control form-control-user"
+             placeholder="Description Here.........">
+    </div>
+    <div class="form-group">
+        <input type="text" asp-for="@Model.LinkEdin" class="form-control form-control-user"
+             placeholder="LinkEdin Here.........">
+    </div>
+    <div class="form-group">
+        <input type="text" asp-for="@Model.Github" class="form-control form-control-user"
+             placeholder="Github Here.........">
+    </div>
+    <div class="form-group">
+        <input type="text" asp-for="@Model.Twitter" class="form-control form-control-user"
+             placeholder="Twitter Here.........">
+    </div>
+    <div class="form-group">
+        <input type="text" asp-for="@Model.Facebook" class="form-control form-control-user"
+             placeholder="Facebook Here.........">
+    </div>
+    <button type="submit" class="btn btn-primary btn-user btn-block">
+        Create
+    </button>
+    <hr>
+ 
+</form>
