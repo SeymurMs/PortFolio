@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using PortfolioTask.DAL;
 using PortfolioTask.ViewModel;
 using System.Linq;
@@ -18,6 +19,9 @@ namespace PortfolioTask.Controllers
             HomeVM home = new HomeVM()
             {
                 abouts = _context.About.ToList(),
+                experiences = _context.experiences.ToList(),
+                educations = _context.educations.ToList(),
+                skills = _context.skills.Include(p => p.WorkFlows).Include(s => s.ProgLan).ToList(),
             };
             return View(home);
         }

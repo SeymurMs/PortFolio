@@ -1,0 +1,29 @@
+﻿@model Skills
+@{
+    ViewData["Title"] = "Create";
+}
+
+<form method="post" class="user">
+    <div class="form-group">
+        <input type="text" asp-for="@Model.Title class=" form-control form-control-user"
+               placeholder="Name Here.........">
+    </div>
+    <div class="form-group">
+        <select class="select2 form-control" multiple asp-for="@Model.ProgrammingLanId " asp-items="@(new SelectList(ViewBag.Proglan,"Id","Path"))">
+            <option disabled selected>Proglan</option>
+        </select>
+    </div>
+      <div class="form-group">
+        <select class="select2 form-control" multiple asp-for="@Model.WorkFlowsId " asp-items="@(new SelectList(ViewBag.WorkFlows,"Id","Name"))">
+            <option disabled selected>Proglan</option>
+        </select>
+    </div>
+
+
+    <button type="submit" class="btn btn-primary btn-user btn-block">
+        Create
+    </button>
+    <hr>
+
+</form>
+

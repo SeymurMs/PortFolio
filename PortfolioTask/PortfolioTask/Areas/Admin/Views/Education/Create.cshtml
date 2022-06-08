@@ -1,0 +1,30 @@
+﻿@model Education
+@{
+    ViewData["Title"] = "Create";
+}
+
+<form method="post" class="user">
+    <div class="form-group">
+        <input type="text" asp-for="@Model.Name" class="form-control form-control-user"
+             placeholder="Name Here.........">
+    </div> 
+    <div class="form-group">
+        <input type="text" asp-for="@Model.Title" class="form-control form-control-user"
+             placeholder="Title Here.........">
+    </div>
+    <div class="form-group">
+        <input type="text" asp-for="@Model.Description" class="form-control form-control-user"
+             placeholder="Description Here.........">
+    </div>  
+    
+    <div class="form-group">
+        <input type="number" asp-for="@Model.Raiting" class="form-control form-control-user"
+             placeholder="Description Here.........">
+    </div>
+    <button type="submit" class="btn btn-primary btn-user btn-block">
+        Create
+    </button>
+    <hr>
+ 
+</form>
+
